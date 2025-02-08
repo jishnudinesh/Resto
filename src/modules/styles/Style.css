@@ -1,0 +1,133 @@
+.align-right {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.tab {
+  margin-left: 15px;
+}
+
+
+
+.dish-container {
+  font-family: Arial, sans-serif;
+}
+
+.counter-container {
+  display: flex;
+  align-items: center;
+  background-color: green;
+  padding: 5px;
+  border-radius: 5px;
+  max-width: 100px;
+}
+
+.counter-button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.counter-value {
+  margin: 0 10px;
+  font-size: 20px;
+  color: white;
+}
+
+.customization {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.info-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.calories {
+  margin-right: 10px;
+}
+
+.image {
+  /* background-color: #f0f0f0;  */
+  /* padding: 5px 10px; */
+  border-radius: 5px;
+  text-align: right;
+
+}
+
+
+.Row {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 10px;
+}
+
+.Column {
+  display: table-cell;
+  /* background-color: red;  */
+}
+
+.active {
+  color: #c71919;
+  border-radius: 10px;
+  background-color: rgb(243, 235, 235);
+}
+
+.cart {
+  color: white;
+  display: inline-block;
+  /* Inline elements with width and height. TL;DR they make the icon buttons stack from left-to-right instead of top-to-bottom */
+  position: relative;
+  /* All 'absolute'ly positioned elements are relative to this one */
+  padding: 2px 5px;
+  /* Add some padding so it looks nice */
+}
+
+/* Make the badge float in the top right corner of the button */
+.cart__badge {
+  background-color: #fa3e3e;
+  border-radius: 2px;
+  color: white;
+
+  padding: 1px 3px;
+  font-size: 10px;
+
+  position: absolute;
+  /* Position the badge within the relatively positioned button */
+  top: 0;
+  right: 0;
+}
+
+.sticky {
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 98%;
+}
+
+.tabs {
+
+  margin-bottom: 10px;
+
+}
+
+hr.solid {
+  border-top: 1px solid #bbb;
+}
+
+.page-container {
+  padding-right: 15px;
+  padding-left: 15px;
+
+}
+
