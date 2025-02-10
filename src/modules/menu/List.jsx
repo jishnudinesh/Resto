@@ -26,7 +26,6 @@ const List = () => {
             setTab(items[0].menu_category_id)
         }
     }, [data])
-    console.log(categorylist)
     return (
         <>
             <div className="sticky">
