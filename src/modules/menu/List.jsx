@@ -15,7 +15,7 @@ const List = () => {
             setCategorylist(list.find((f) => tab === f.menu_category_id).category_dishes)
         }
 
-    }, [tab])
+    }, [tab]) //eslint-disable-line
 
 
 

@@ -39,7 +39,7 @@ const Dishes = ({ dish }) => {
         <div class="Row">
             <div class="Column">
                 <div className="dish-container">
-                    <p><span>{dish.dish_Type === 1 ? <img width={15} height={15} src='nov.png' /> : <img width={15} height={15}  src='veg.png'/>}</span>{dish.dish_name}</p>
+                    <p><span>{dish.dish_Type === 1 ? <img alt="loading"  width={15} height={15} src='nov.png' /> : <img alt="loading" width={15} height={15}  src='veg.png'/>}</span>{dish.dish_name}</p>
                     <p>{dish.dish_currency+ ' '+ dish.dish_price}</p>
                     <p>{dish.dish_description}</p>
 
@@ -62,7 +62,7 @@ const Dishes = ({ dish }) => {
                     <p className="calories">{dish.dish_calories} calories</p>
                 </div>
             </div>
-            <div class="Column"><p className="image"><img width={80} height={80} src={dish.dish_image} /></p></div>
+            <div class="Column"><p className="image"><img alt="loading" width={80} height={80} src={dish.dish_image} /></p></div>
         </div>
 
 

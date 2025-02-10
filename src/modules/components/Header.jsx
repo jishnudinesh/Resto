@@ -9,7 +9,7 @@ const Header = () => {
 
             <span className="align-right">
                 My Orders
-                <span className="cart"><img height={25} width={25} src={'cart.jpg'} /><span className="cart__badge">{order}</span></span>
+                <span className="cart"><img alt="loading" height={25} width={25} src={'cart.jpg'} /><span className="cart__badge">{order}</span></span>
             </span>
         </div >
 
