@@ -46,7 +46,7 @@ const List = () => {
             <hr class="solid"></hr>
             {categorylist.map((i) => (
                 <>
-                    <Dishes dish={i} />
+                    <Dishes dish={i} key={i.dish_id} />
                     <hr class="solid"></hr>
                 </>
 
