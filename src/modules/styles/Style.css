@@ -1,14 +1,12 @@
+
 .align-right {
   display: flex;
   justify-content: flex-end;
-
 }
 
 .tab {
   margin-left: 15px;
 }
-
-
 
 .dish-container {
   font-family: Arial, sans-serif;
@@ -56,13 +54,9 @@
 }
 
 .image {
-  /* background-color: #f0f0f0;  */
-  /* padding: 5px 10px; */
   border-radius: 5px;
   text-align: right;
-
 }
-
 
 .Row {
   display: table;
@@ -73,7 +67,6 @@
 
 .Column {
   display: table-cell;
-  /* background-color: red;  */
 }
 
 .active {
@@ -85,24 +78,17 @@
 .cart {
   color: white;
   display: inline-block;
-  /* Inline elements with width and height. TL;DR they make the icon buttons stack from left-to-right instead of top-to-bottom */
   position: relative;
-  /* All 'absolute'ly positioned elements are relative to this one */
   padding: 2px 5px;
-  /* Add some padding so it looks nice */
 }
 
-/* Make the badge float in the top right corner of the button */
 .cart__badge {
   background-color: #fa3e3e;
   border-radius: 2px;
   color: white;
-
   padding: 1px 3px;
   font-size: 10px;
-
   position: absolute;
-  /* Position the badge within the relatively positioned button */
   top: 0;
   right: 0;
 }
@@ -116,9 +102,7 @@
 }
 
 .tabs {
-
   margin-bottom: 10px;
-
 }
 
 hr.solid {
@@ -128,6 +112,160 @@ hr.solid {
 .page-container {
   padding-right: 15px;
   padding-left: 15px;
-
 }
 
+
+@media (max-width: 1024px) {
+  .Row {
+    display: block;
+    width: 100%;
+  }
+
+  .Column {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .dish-container {
+    padding: 10px;
+  }
+
+  .counter-container {
+    max-width: 80px;
+  }
+
+  .counter-button {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .counter-value {
+    font-size: 18px;
+  }
+
+  .info-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .calories {
+    margin-right: 0;
+  }
+
+  .image {
+    text-align: center;
+  }
+
+  .cart__badge {
+    font-size: 9px;
+  }
+
+  .tabs {
+    margin-bottom: 5px;
+  }
+
+  .sticky {
+    width: 100%;
+  }
+
+  .page-container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Row {
+    display: block;
+  }
+
+  .Column {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .counter-container {
+    max-width: 60px;
+  }
+
+  .counter-button {
+    font-size: 16px;
+    padding: 7px;
+  }
+
+  .counter-value {
+    font-size: 16px;
+  }
+
+  .tabs {
+    margin-bottom: 5px;
+  }
+
+  .dish-container {
+    padding: 8px;
+  }
+
+  .image {
+    text-align: center;
+  }
+
+  .sticky {
+    width: 100%;
+  }
+
+  .page-container {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .align-right {
+    justify-content: center;
+  }
+
+  .tab {
+    margin-left: 10px;
+  }
+
+  .counter-container {
+    max-width: 50px;
+  }
+
+  .counter-button {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .counter-value {
+    font-size: 14px;
+  }
+
+  .info-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .calories {
+    margin-right: 0;
+  }
+
+  .tabs {
+    margin-bottom: 3px;
+  }
+
+  .sticky {
+    width: 100%;
+  }
+
+  .page-container {
+    padding: 0 5px;
+  }
+
+  .cart__badge {
+    font-size: 8px;
+  }
+
+  .image {
+    text-align: center;
+  }
+}

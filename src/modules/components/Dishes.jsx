@@ -3,22 +3,52 @@ import "../styles/Style.css"
 import { MenuContext } from "../menu/menuContext";
 
 const Dishes = ({ dish }) => {
-    const [value, setValue] = useState(0);
+    // console.log(dish.dish_id);
 
-    const{setOrder,order}=useContext(MenuContext)
+    const { oderDetails, setOrderDetails } = useContext(MenuContext)
+    const [value, setValue] = useState(oderDetails.find((i) => i.dish_id === dish.dish_id)?.count || 0);
+
     const sub = () => {
         if (value > 0) {
             setValue(value - 1)
-            setOrder(order-1)
+            if (oderDetails.length && oderDetails.find((i) => i.dish_id === dish.dish_id)) {
+                setOrderDetails(oderDetails.map((i) => {
+                    if (i.dish_id === dish.dish_id) {
+                        return {
+                            dish_id: dish.dish_id,
+                            count: i.count - 1
+                        }
+                    } else {
+                        return i
+                    }
+                }))
+
+            }
         }
     }
 
     const add = () => {
         setValue(value + 1)
-        setOrder(order+1)
+        if (oderDetails.length && oderDetails.find((i) => i.dish_id === dish.dish_id)) {
+            setOrderDetails(oderDetails.map((i) => {
+                if (i.dish_id === dish.dish_id) {
+                    return {
+                        dish_id: dish.dish_id,
+                        count: i.count + 1
+                    }
+                } else {
+                    return i
+                }
+            }))
+
+        } else {
+            setOrderDetails([...oderDetails, { dish_id: dish.dish_id, count: 1 }])
+        }
+
+
     }
 
-    console.log(dish)
+    console.log(oderDetails, 'order detilas');
 
     return (
         // <div>
@@ -39,8 +69,8 @@ const Dishes = ({ dish }) => {
         <div class="Row">
             <div class="Column">
                 <div className="dish-container">
-                    <p><span>{dish.dish_Type === 1 ? <img alt="loading"  width={15} height={15} src='nov.png' /> : <img alt="loading" width={15} height={15}  src='veg.png'/>}</span>{dish.dish_name}</p>
-                    <p>{dish.dish_currency+ ' '+ dish.dish_price}</p>
+                    <p><span>{dish.dish_Type === 1 ? <img alt="loading" width={15} height={15} src='nov.png' /> : <img alt="loading" width={15} height={15} src='veg.png' />}</span>{dish.dish_name}</p>
+                    <p>{dish.dish_currency + ' ' + dish.dish_price}</p>
                     <p>{dish.dish_description}</p>
 
 
